@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TableLayout
-        android:id="@+id/SpiritusCatTable"
+        android:id="@+id/TechnoBajerCatTable"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:stretchColumns="2">
@@ -36,7 +36,7 @@
                         android:layout_marginTop="10dp"
                         android:contentDescription="@string/content_description_media"
                         android:scaleType="centerInside"
-                        app:srcCompat="@drawable/productvodkasmirnoff" />
+                        app:srcCompat="@drawable/productbreezero" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -48,7 +48,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Smirnoff Vodka"
+                            android:text="Breezer Orange"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -56,7 +56,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Alkohol: 37,5%\nEmballage: Glasflaske\nStørrelse: 70 cl.\nLand: Rusland"
+                            android:text="Alkohol: 4%\nEmballage: Glasflaske\nStørrelse: 27,5 cl.\nLand: Tyskland"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary" />
@@ -66,7 +66,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="120 kr"
+                            android:text="13 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />
@@ -100,7 +100,7 @@
                         android:layout_marginTop="10dp"
                         android:contentDescription="@string/content_description_media"
                         android:scaleType="centerInside"
-                        app:srcCompat="@drawable/productvodkaabsolut" />
+                        app:srcCompat="@drawable/productbreezerp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -112,7 +112,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Absolut Vodka"
+                            android:text="Breezer Pine"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -120,7 +120,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Alkohol: 40%\nEmballage: Glasflaske\nStørrelse: 70 cl.\nLand: Sverige"
+                            android:text="Alkohol: 4%\nEmballage: Glasflaske\nStørrelse: 27,5 cl.\nLand: Tyskland"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary" />
@@ -130,7 +130,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="144 kr"
+                            android:text="13 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />
@@ -167,7 +167,7 @@
                         android:layout_marginTop="10dp"
                         android:contentDescription="@string/content_description_media"
                         android:scaleType="centerInside"
-                        app:srcCompat="@drawable/productsobieskivodka" />
+                        app:srcCompat="@drawable/productsmirnoffice" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -179,7 +179,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Sobieski Vodka"
+                            android:text="Smirnoff Ice"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -187,7 +187,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Alkohol: 37,5%\nEmballage: Glasflaske\nStørrelse: 70 cl.\nLand: Polen"
+                            android:text="Alkohol: 4%\nEmballage: Glasflaske\nStørrelse: 27,5 cl.\nLand: Rusland"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary" />
@@ -197,7 +197,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="131 kr"
+                            android:text="12 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />
@@ -231,7 +231,7 @@
                         android:layout_marginTop="10dp"
                         android:contentDescription="@string/content_description_media"
                         android:scaleType="centerInside"
-                        app:srcCompat="@drawable/productbolsvodka" />
+                        app:srcCompat="@drawable/productcultshaker" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -243,7 +243,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Bols Vodka"
+                            android:text="Shaker Sport"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -251,7 +251,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Alkohol: 37,5%\nEmballage: Glasflaske\nStørrelse: 70 cl.\nLand: Holland"
+                            android:text="Alkohol: 4%\nEmballage: Glasflaske\nStørrelse: 27,5 cl.\nLand: Danmark"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary" />
@@ -261,7 +261,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="124 kr"
+                            android:text="15 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />
@@ -298,7 +298,7 @@
                         android:layout_marginTop="10dp"
                         android:contentDescription="@string/content_description_media"
                         android:scaleType="centerInside"
-                        app:srcCompat="@drawable/productbelvederevodka" />
+                        app:srcCompat="@drawable/productcultshakero" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -310,7 +310,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Belvedere Vodka"
+                            android:text="Shaker Original"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -318,7 +318,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Alkohol: 40%\nEmballage: Glasflaske\nStørrelse: 70 cl.\nLand: Polen"
+                            android:text="Alkohol: 4%\nEmballage: Glasflaske\nStørrelse: 27,5 cl.\nLand: Danmark"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary" />
@@ -328,7 +328,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="259 kr"
+                            android:text="15 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />
@@ -362,7 +362,7 @@
                         android:layout_marginTop="10dp"
                         android:contentDescription="@string/content_description_media"
                         android:scaleType="centerInside"
-                        app:srcCompat="@drawable/productgreygoose" />
+                        app:srcCompat="@drawable/productcultshakerh" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -374,7 +374,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Grey Goose"
+                            android:text="Hard Seltzer"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -382,7 +382,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Alkohol: 40%\nEmballage: Glasflaske\nStørrelse: 70 cl.\nLand: Frankrig"
+                            android:text="Alkohol: 4%\nEmballage: Glasflaske\nStørrelse: 27,5 cl.\nLand: Danmark"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary" />
@@ -392,7 +392,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="279 kr"
+                            android:text="15 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />

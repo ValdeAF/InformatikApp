@@ -18,7 +18,6 @@ public class LoadActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_load);
 
-        getSupportActionBar().hide();
         Context context = this;
         ImageView image = findViewById(R.id.startLogoImageview);
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.rotate);

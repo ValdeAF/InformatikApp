@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,6 +39,42 @@ public class DashboardFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        binding.radioButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RadioButton rad = (RadioButton)getActivity().findViewById(R.id.radioButton1);
+                rad.setChecked(false);
+                RadioButton rad2 = (RadioButton)getActivity().findViewById(R.id.radioButton2);
+                rad2.setChecked(false);
+            }
+        });
+
+        binding.radioButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RadioButton rad = (RadioButton)getActivity().findViewById(R.id.radioButton);
+                rad.setChecked(false);
+                RadioButton rad2 = (RadioButton)getActivity().findViewById(R.id.radioButton2);
+                rad2.setChecked(false);
+            }
+        });
+
+        binding.radioButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RadioButton rad = (RadioButton)getActivity().findViewById(R.id.radioButton1);
+                rad.setChecked(false);
+                RadioButton rad2 = (RadioButton)getActivity().findViewById(R.id.radioButton);
+                rad2.setChecked(false);
+            }
+        });
+
+        binding.cardx.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "Click", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

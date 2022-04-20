@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/TestLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TableLayout
-        android:id="@+id/SpiritusCatTable"
+        android:id="@+id/VinCatTable"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:stretchColumns="2">
@@ -36,7 +35,7 @@
                         android:layout_marginTop="10dp"
                         android:contentDescription="@string/content_description_media"
                         android:scaleType="centerInside"
-                        app:srcCompat="@drawable/productvodkasmirnoff" />
+                        app:srcCompat="@drawable/productcotesdurhone" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -48,7 +47,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Smirnoff Vodka"
+                            android:text="Côtes Du Rhône"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -56,7 +55,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Alkohol: 37,5%\nEmballage: Glasflaske\nStørrelse: 70 cl.\nLand: Rusland"
+                            android:text="Alkohol: 14%\nEmballage: Glasflaske\nStørrelse: 75 cl.\nLand: Frankrig\nMærke: Guillaume Gonnet"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary" />
@@ -66,7 +65,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="120 kr"
+                            android:text="149 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />
@@ -100,7 +99,7 @@
                         android:layout_marginTop="10dp"
                         android:contentDescription="@string/content_description_media"
                         android:scaleType="centerInside"
-                        app:srcCompat="@drawable/productvodkaabsolut" />
+                        app:srcCompat="@drawable/productsueslesc" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -112,7 +111,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Absolut Vodka"
+                            android:text="Sous Les Cailloux"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -120,7 +119,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Alkohol: 40%\nEmballage: Glasflaske\nStørrelse: 70 cl.\nLand: Sverige"
+                            android:text="Alkohol: 13,5%\nEmballage: Glasflaske\nStørrelse: 75 cl.\nLand: Frankrig\nMærke: Clos Gravillas"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary" />
@@ -130,7 +129,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="144 kr"
+                            android:text="159 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />
@@ -145,7 +144,7 @@
         <TableRow>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card130"
+                android:id="@+id/card100"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -167,7 +166,7 @@
                         android:layout_marginTop="10dp"
                         android:contentDescription="@string/content_description_media"
                         android:scaleType="centerInside"
-                        app:srcCompat="@drawable/productsobieskivodka" />
+                        app:srcCompat="@drawable/productcotesdep" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -179,7 +178,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Sobieski Vodka"
+                            android:text="Côtes de Provence"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -187,7 +186,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Alkohol: 37,5%\nEmballage: Glasflaske\nStørrelse: 70 cl.\nLand: Polen"
+                            android:text="Alkohol: 12,5%\nEmballage: Glasflaske\nStørrelse: 75 cl.\nLand: Frankrig\nMærke: MiP Rosé"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary" />
@@ -197,7 +196,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="131 kr"
+                            android:text="115 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />
@@ -209,7 +208,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card115"
+                android:id="@+id/card114"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -231,7 +230,7 @@
                         android:layout_marginTop="10dp"
                         android:contentDescription="@string/content_description_media"
                         android:scaleType="centerInside"
-                        app:srcCompat="@drawable/productbolsvodka" />
+                        app:srcCompat="@drawable/productenrose" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -243,7 +242,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Bols Vodka"
+                            android:text="En Rosé"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -251,7 +250,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Alkohol: 37,5%\nEmballage: Glasflaske\nStørrelse: 70 cl.\nLand: Holland"
+                            android:text="Alkohol: 12,5%\nEmballage: Glasflaske\nStørrelse: 75 cl.\nLand: Frankrig\nMærke: Felines de Jourdan"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary" />
@@ -261,7 +260,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="124 kr"
+                            android:text="140 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />
@@ -276,7 +275,7 @@
         <TableRow>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card106"
+                android:id="@+id/card145"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -298,7 +297,7 @@
                         android:layout_marginTop="10dp"
                         android:contentDescription="@string/content_description_media"
                         android:scaleType="centerInside"
-                        app:srcCompat="@drawable/productbelvederevodka" />
+                        app:srcCompat="@drawable/productbicodaran" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -310,7 +309,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Belvedere Vodka"
+                            android:text="Bico Da Ran"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -318,7 +317,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Alkohol: 40%\nEmballage: Glasflaske\nStørrelse: 70 cl.\nLand: Polen"
+                            android:text="Alkohol: 13%\nEmballage: Glasflaske\nStørrelse: 75 cl.\nLand: Spanien\nMærke: Fento"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary" />
@@ -328,7 +327,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="259 kr"
+                            android:text="125 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />
@@ -340,7 +339,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card117"
+                android:id="@+id/card113"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -362,7 +361,7 @@
                         android:layout_marginTop="10dp"
                         android:contentDescription="@string/content_description_media"
                         android:scaleType="centerInside"
-                        app:srcCompat="@drawable/productgreygoose" />
+                        app:srcCompat="@drawable/productviganpinot" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -374,7 +373,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Grey Goose"
+                            android:text="Pinot Grigio"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -382,7 +381,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="Alkohol: 40%\nEmballage: Glasflaske\nStørrelse: 70 cl.\nLand: Frankrig"
+                            android:text="Alkohol: 12%\nEmballage: Glasflaske\nStørrelse: 75 cl.\nLand: Italien\nMærke: Corte Vigna"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary" />
@@ -392,7 +391,138 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="279 kr"
+                            android:text="85 kr"
+                            android:textAlignment="center"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:textColor="@color/orange" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </TableRow>
+
+        <TableRow>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card154"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Media -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="10dp"
+                        android:contentDescription="@string/content_description_media"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/productjuvemasana" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="11dp">
+
+                        <!-- Title, secondary and supporting text -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Juve Masana"
+                            android:textAlignment="center"
+                            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Alkohol: 11,5%\nEmballage: Glasflaske\nStørrelse: 75 cl.\nLand: Spanien \nMærke: Juve Masana"
+                            android:textAlignment="center"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="95 kr"
+                            android:textAlignment="center"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:textColor="@color/orange" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card162"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Media -->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="10dp"
+                        android:contentDescription="@string/content_description_media"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/productblancdeblancs" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="11dp">
+
+                        <!-- Title, secondary and supporting text -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Blanc de Blancs"
+                            android:textAlignment="center"
+                            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Alkohol: 12%\nEmballage: Glasflaske\nStørrelse: 75 cl.\nLand: Frankrig \nMærke: Paul Louis"
+                            android:textAlignment="center"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="85 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />

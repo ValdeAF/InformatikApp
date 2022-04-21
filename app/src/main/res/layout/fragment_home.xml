@@ -8,39 +8,18 @@
     tools:context=".ui.home.HomeFragment">
 
     <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="283dp" />
-
-    <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="93dp"
         android:fontFamily="sans-serif-black"
-        android:text="God aften \nBruger"
+        android:text="God aften\nBruger"
         android:textColor="?attr/colorSecondaryVariant"
         android:textSize="36dp"
-        android:layout_marginLeft="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/searchView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="348dp"
-        android:layout_height="36dp"
-        android:background="?attr/colorSecondary"
+        android:layout_marginLeft="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.165" />
+        app:layout_constraintVertical_bias="0.046"
+        tools:layout_editor_absoluteX="0dp" />
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -503,10 +482,10 @@
         android:id="@+id/HorizonttalScroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="10dp"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintVertical_bias="0.038">
 
         <com.google.android.material.tabs.TabLayout

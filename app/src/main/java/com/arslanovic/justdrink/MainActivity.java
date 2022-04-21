@@ -15,6 +15,7 @@ import com.arslanovic.justdrink.ui.home.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
+        setUpToolBar(myToolbar);
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -58,10 +59,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_settings:
-                Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
-                return true;
-
             case R.id.action_favorite:
                 // User chose the "Favorite" action, mark the current item
                 // as a favorite...
@@ -74,6 +71,21 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
 
         }
+    }
+
+    private void setUpToolBar(Toolbar tool) {
+        setSupportActionBar(tool);
+        //Set Home screen icon
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_search_24);
+
+        //Enable Home icon
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //Toolbar title
+        getSupportActionBar().setTitle(""/*getString(R.string.app_name)*/);
+
+        //Set toolbar as action bar
+        setSupportActionBar(tool);
     }
 
 }

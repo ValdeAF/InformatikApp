@@ -11,14 +11,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
         android:text="Profil"
         android:textAppearance="?attr/textAppearanceHeadline5" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardx"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="5dp">
@@ -45,8 +45,8 @@
 
                     <ImageView
                         android:id="@+id/imageView22"
-                        android:layout_width="100dp"
-                        android:layout_height="50dp"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
                         android:layout_weight="1"
                         android:src="@drawable/profile" />
 
@@ -60,17 +60,18 @@
                             android:id="@+id/textView355"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
+                            android:layout_margin="10dp"
                             android:text="Peter Larsen"
                             android:textAppearance="?attr/textAppearanceHeadline6"
-                            android:textColor="?android:attr/textColorSecondary" />
+                            android:textColor="?attr/colorSecondaryVariant" />
 
                         <TextView
                             android:id="@+id/textView35"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:text="peterlarsen@gmail.com\n"
+                            android:layout_margin="10dp"
+                            android:text="peterlarsen@gmail.com"
+                            android:textSize="18dp"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary" />
 
@@ -78,8 +79,9 @@
                             android:id="@+id/textView35676"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_margin="5dp"
-                            android:text="Hammerichsgade 1, Copenhagen\n"
+                            android:layout_margin="10dp"
+                            android:text="Hammerichsgade 1, Copenhagen"
+                            android:textSize="18dp"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary" />
 
@@ -87,8 +89,9 @@
                             android:id="@+id/textView356"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_margin="5dp"
+                            android:layout_margin="10dp"
                             android:text="+45 33 426000"
+                            android:textSize="18dp"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="?android:attr/textColorSecondary" />
                     </LinearLayout>
@@ -105,13 +108,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="80dp"
+        android:layout_marginLeft="50dp"
         android:text="Betalings metoder"
         android:textAppearance="?attr/textAppearanceHeadline5" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="5dp">
@@ -139,16 +142,16 @@
                     <RadioButton
                         android:id="@+id/radioButton"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:buttonTint="@color/orange"
                         android:checked="true"
-                        android:scaleX="0.7"
-                        android:scaleY="0.7" />
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
 
                     <ImageView
                         android:id="@+id/imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
+                        android:layout_width="140dp"
+                        android:layout_height="70dp"
                         android:layout_weight="0.8"
                         android:src="@drawable/credit_card" />
 
@@ -156,9 +159,10 @@
                         android:id="@+id/textView3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:text="Kort"
+                        android:textSize="16dp"
                         android:textAlignment="center"
                         android:textAppearance="?attr/textAppearanceBody2"
                         android:textColor="?android:attr/textColorSecondary" />
@@ -178,15 +182,15 @@
                     <RadioButton
                         android:id="@+id/radioButton1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:buttonTint="@color/orange"
-                        android:scaleX="0.7"
-                        android:scaleY="0.7" />
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
 
                     <ImageView
                         android:id="@+id/imageView0"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
+                        android:layout_width="140dp"
+                        android:layout_height="70dp"
                         android:layout_weight="0.8"
                         android:src="@drawable/paypal" />
 
@@ -194,9 +198,10 @@
                         android:id="@+id/textView10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:text="PayPal"
+                        android:textSize="16dp"
                         android:textAlignment="center"
                         android:textAppearance="?attr/textAppearanceBody2"
                         android:textColor="?android:attr/textColorSecondary" />
@@ -216,15 +221,15 @@
                     <RadioButton
                         android:id="@+id/radioButton2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:buttonTint="@color/orange"
-                        android:scaleX="0.7"
-                        android:scaleY="0.7" />
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
 
                     <ImageView
                         android:id="@+id/imageView20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
+                        android:layout_width="140dp"
+                        android:layout_height="70dp"
                         android:layout_weight="0.8"
                         android:src="@drawable/google_pay" />
 
@@ -232,9 +237,10 @@
                         android:id="@+id/textView33"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="1dp"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:text="Google Pay"
+                        android:textSize="16dp"
                         android:textAlignment="center"
                         android:textAppearance="?attr/textAppearanceBody2"
                         android:textColor="?android:attr/textColorSecondary" />

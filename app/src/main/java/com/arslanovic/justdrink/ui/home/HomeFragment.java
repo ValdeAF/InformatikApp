@@ -39,13 +39,7 @@ public class HomeFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        /*binding.card11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getActivity(), "Click", Toast.LENGTH_SHORT).show();
-            }
-        });
-*/
+
         binding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -203,6 +197,13 @@ public class HomeFragment extends Fragment {
             }
         });
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        TabLayout tabLayout = getActivity().findViewById(R.id.tabLayout);
+        tabLayout.selectTab(tabLayout.getTabAt(1));
+        tabLayout.selectTab(tabLayout.getTabAt(0)); }
 
     @Override
     public void onDestroyView() {

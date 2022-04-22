@@ -8,7 +8,7 @@
     tools:context=".ui.home.HomeFragment">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/BeskedText"
         android:layout_width="match_parent"
         android:layout_height="93dp"
         android:fontFamily="sans-serif-black"
@@ -485,7 +485,7 @@
         android:layout_marginTop="10dp"
         android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/BeskedText"
         app:layout_constraintVertical_bias="0.038">
 
         <com.google.android.material.tabs.TabLayout

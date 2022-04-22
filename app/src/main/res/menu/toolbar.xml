@@ -9,7 +9,7 @@
         app:showAsAction="ifRoom"/>
 
     <item android:id="@+id/action_search"
-        android:title="action_search"
+        android:title="Search"
         android:icon="@drawable/ic_baseline_search_24"
         app:showAsAction="ifRoom|collapseActionView"
         app:actionViewClass="android.widget.SearchView" />

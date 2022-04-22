@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications, R.id.navigation_history)
+                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         //NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu items for use in the action bar
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.toolbar, menu);
+
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -76,10 +77,10 @@ public class MainActivity extends AppCompatActivity {
     private void setUpToolBar(Toolbar tool) {
         setSupportActionBar(tool);
         //Set Home screen icon
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_search_24);
+        //getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_search_24);
 
         //Enable Home icon
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Toolbar title
         getSupportActionBar().setTitle(""/*getString(R.string.app_name)*/);

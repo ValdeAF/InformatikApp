@@ -1,9 +1,8 @@
 <resources>
     <string name="app_name">JustDrink</string>
-    <string name="title_home">Home</string>
-    <string name="title_account">Account</string>
-    <string name="title_liked">Liked</string>
-    <string name="title_history">History</string>
+    <string name="title_hjem">Hjem</string>
+    <string name="title_konto">Konto</string>
+    <string name="title_historie">Historie</string>
     <string name="content_description_media">Dette er vores lækre vodka</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

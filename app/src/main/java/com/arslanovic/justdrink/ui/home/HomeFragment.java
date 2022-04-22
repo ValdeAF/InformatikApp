@@ -20,6 +20,9 @@ import com.arslanovic.justdrink.databinding.FragmentHomeBinding;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.tabs.TabLayout;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
@@ -203,7 +206,24 @@ public class HomeFragment extends Fragment {
         super.onStart();
         TabLayout tabLayout = getActivity().findViewById(R.id.tabLayout);
         tabLayout.selectTab(tabLayout.getTabAt(1));
-        tabLayout.selectTab(tabLayout.getTabAt(0)); }
+        tabLayout.selectTab(tabLayout.getTabAt(0));
+
+        LocalTime time = LocalTime.now(); // Gets the current time
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH");
+        TextView t = (TextView)getActivity().findViewById(R.id.BeskedText);
+        if(Integer.parseInt(time.format(formatter)) >= 18 && Integer.parseInt(time.format(formatter)) <= 23){
+            t.setText("God aften\nBruger");
+        }
+        else if(Integer.parseInt(time.format(formatter)) >= 13 && Integer.parseInt(time.format(formatter)) <= 17){
+            t.setText("God eftermiddag\nBruger");
+        }
+        else if(Integer.parseInt(time.format(formatter)) >= 9 && Integer.parseInt(time.format(formatter)) <= 12){
+            t.setText("God formiddag\nBruger");
+        }
+        else{
+            t.setText("Gå i seng\nBruger");
+        }
+    }
 
     @Override
     public void onDestroyView() {

@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.arslanovic.justdrink.R;
+import com.arslanovic.justdrink.ShoppingSystem;
 import com.arslanovic.justdrink.databinding.FragmentHomeBinding;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.tabs.TabLayout;
@@ -26,6 +27,7 @@ import java.time.format.DateTimeFormatter;
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
+    private ShoppingSystem shoppingSystem;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -34,7 +36,7 @@ public class HomeFragment extends Fragment {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
+        shoppingSystem = new ShoppingSystem();
        // final TextView textView = binding.textHome;
        // homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
@@ -61,11 +63,14 @@ public class HomeFragment extends Fragment {
                         MaterialCardView m = null;
                         for(int a = 0; a<v.getChildCount(); a++){
                             m = (MaterialCardView) v.getChildAt(a);
-
+                            LinearLayout c = (LinearLayout)m.getChildAt(0);
+                            LinearLayout d = (LinearLayout) c.getChildAt(1);
+                            TextView t = (TextView)d.getChildAt(0);
+                            shoppingSystem.createProduct(String.valueOf(t.getText()), m.getId(), 12);
                             m.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    Toast.makeText(getActivity(), "Id is: " + view.getId(), Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getActivity(), shoppingSystem.findProduct(view.getId()).getName() /*+ view.getId()*/, Toast.LENGTH_SHORT).show();
                                 }
                             });
                         }

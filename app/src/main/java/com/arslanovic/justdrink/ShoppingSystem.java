@@ -29,10 +29,11 @@ public class ShoppingSystem {
     }
 
     public String getBasketSummary(){
+        String res = "Beskrivelse          Pris";
         for(int i = 0; i < basket.size(); i++){
-
+            res += basket.get(i).getName() + "          " + basket.get(i).getPrice();
         }
-        return "h";
+        return res;
     }
 
     private int numberOfItems(){

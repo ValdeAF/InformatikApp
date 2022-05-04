@@ -1,6 +1,7 @@
 package com.arslanovic.justdrink;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class SecondFragment extends Fragment {
 
@@ -65,10 +67,42 @@ private FirebaseAuth mAuth;
                                     if (task.isSuccessful()) {
                                         // Sign in success, update UI with the signed-in user's information
                                         FirebaseUser user = mAuth.getCurrentUser();
-                                        Toast.makeText(getActivity(), "Bruger oprettet",
-                                                Toast.LENGTH_SHORT).show();
-                                        NavHostFragment.findNavController(SecondFragment.this)
-                                                .navigate(R.id.action_SecondFragment_to_FirstFragment);
+
+                                        TextInputEditText name = (TextInputEditText)getActivity().findViewById(R.id.PersonNavnTxtView);
+
+                                        UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                                .setDisplayName(name.getText().toString())
+                                                .setPhotoUri(Uri.parse("https://cdn-icons-png.flaticon.com/512/3135/3135715.png"))
+                                                .build();
+
+                                        user.updateProfile(profileUpdates)
+                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                    @Override
+                                                    public void onComplete(@NonNull Task<Void> task) {
+                                                        if (task.isSuccessful()) {
+
+                                                            mAuth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString())
+                                                                    .addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
+                                                                        @Override
+                                                                        public void onComplete(@NonNull Task<AuthResult> task) {
+                                                                            if (task.isSuccessful()) {
+                                                                                // Sign in success, update UI with the signed-in user's information
+                                                                                FirebaseUser user = mAuth.getCurrentUser();
+                                                                                startActivity(new Intent(getActivity(), MainActivity.class));
+                                                                            } else {
+                                                                                // If sign in fails, display a message to the user.
+                                                                                Toast.makeText(getActivity(), "Fejl ved login.",
+                                                                                        Toast.LENGTH_SHORT).show();
+                                                                            }
+                                                                        }
+                                                                    });
+                                                        }
+                                                        else{
+                                                            Toast.makeText(getActivity(), "Fejl ved oprettelse",
+                                                                    Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    }
+                                                });
                                     } else {
                                         // If sign in fails, display a message to the user.
                                         Toast.makeText(getActivity(), "Fejl ved oprettelse",

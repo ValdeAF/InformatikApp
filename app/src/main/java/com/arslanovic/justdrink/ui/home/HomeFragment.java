@@ -20,6 +20,8 @@ import com.arslanovic.justdrink.ShoppingSystem;
 import com.arslanovic.justdrink.databinding.FragmentHomeBinding;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -28,11 +30,13 @@ public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
     private ShoppingSystem shoppingSystem;
+    private FirebaseAuth mAuth;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         HomeViewModel homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
+        mAuth = FirebaseAuth.getInstance();
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -66,11 +70,14 @@ public class HomeFragment extends Fragment {
                             LinearLayout c = (LinearLayout)m.getChildAt(0);
                             LinearLayout d = (LinearLayout) c.getChildAt(1);
                             TextView t = (TextView)d.getChildAt(0);
-                            shoppingSystem.createProduct(String.valueOf(t.getText()), m.getId(), 12);
+                            TextView tt = (TextView)d.getChildAt(2);
+                            shoppingSystem.createProduct(String.valueOf(t.getText()), m.getId(), Integer.parseInt(String.valueOf(tt.getText()).split("\\s+")[0]));
                             m.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    Toast.makeText(getActivity(), shoppingSystem.findProduct(view.getId()).getName() /*+ view.getId()*/, Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getActivity(), shoppingSystem.findProduct(view.getId()).getName() + " " +shoppingSystem.findProduct(view.getId()).getPrice(), Toast.LENGTH_SHORT).show();
+                                    shoppingSystem.addToBasket(shoppingSystem.findProduct(view.getId()));
+                                    Toast.makeText(getActivity(), "Basket value: " + shoppingSystem.getBasketValue(), Toast.LENGTH_SHORT).show();
                                 }
                             });
                         }
@@ -90,16 +97,20 @@ public class HomeFragment extends Fragment {
                         MaterialCardView m = null;
                         for(int a = 0; a<v.getChildCount(); a++){
                             m = (MaterialCardView) v.getChildAt(a);
-
+                            LinearLayout c = (LinearLayout)m.getChildAt(0);
+                            LinearLayout d = (LinearLayout) c.getChildAt(1);
+                            TextView t = (TextView)d.getChildAt(0);
+                            TextView tt = (TextView)d.getChildAt(2);
+                            int tmp = m.getId();
+                            shoppingSystem.createProduct(String.valueOf(t.getText()), tmp + 50, Integer.parseInt(String.valueOf(tt.getText()).split("\\s+")[0]));
                             m.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                    Toast.makeText(getActivity(), "Id is: " + view.getId(), Toast.LENGTH_SHORT).show();
-                                    MaterialCardView b = (MaterialCardView) view;
-                                    LinearLayout c = (LinearLayout)b.getChildAt(0);
-                                    LinearLayout d = (LinearLayout) c.getChildAt(1);
-                                    TextView t = (TextView)d.getChildAt(0);
-                                    Toast.makeText(getActivity(), t.getText(), Toast.LENGTH_SHORT).show();
+                                    int tmp2 = view.getId();
+                                    tmp2 += 50;
+                                    Toast.makeText(getActivity(), shoppingSystem.findProduct(tmp2).getName() + " " +shoppingSystem.findProduct(tmp2).getPrice(), Toast.LENGTH_SHORT).show();
+                                    shoppingSystem.addToBasket(shoppingSystem.findProduct(view.getId()));
+                                    Toast.makeText(getActivity(), String.valueOf(view.getId()), Toast.LENGTH_SHORT).show();
                                 }
                             });
                         }
@@ -216,17 +227,18 @@ public class HomeFragment extends Fragment {
         LocalTime time = LocalTime.now(); // Gets the current time
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH");
         TextView t = (TextView)getActivity().findViewById(R.id.BeskedText);
+        FirebaseUser user = mAuth.getCurrentUser();
         if(Integer.parseInt(time.format(formatter)) >= 18 && Integer.parseInt(time.format(formatter)) <= 23){
-            t.setText("God aften\nBruger");
+            t.setText("God aften\n" + user.getDisplayName());
         }
         else if(Integer.parseInt(time.format(formatter)) >= 13 && Integer.parseInt(time.format(formatter)) <= 17){
-            t.setText("God eftermiddag\nBruger");
+            t.setText("God eftermiddag\n" + user.getDisplayName());
         }
         else if(Integer.parseInt(time.format(formatter)) >= 9 && Integer.parseInt(time.format(formatter)) <= 12){
-            t.setText("God formiddag\nBruger");
+            t.setText("God formiddag\n" + user.getDisplayName());
         }
         else{
-            t.setText("Gå i seng\nBruger");
+            t.setText("Gå i seng\n" + user.getDisplayName());
         }
     }
 

@@ -1,6 +1,7 @@
 package com.arslanovic.justdrink;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -63,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_favorite:
                 // User chose the "Favorite" action, mark the current item
                 // as a favorite...
+                startActivity(new Intent(this, CheckOutActivity.class));
+
                 Toast.makeText(this, "Fav", Toast.LENGTH_SHORT).show();
                 return true;
 

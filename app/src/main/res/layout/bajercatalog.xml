@@ -65,7 +65,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="4,63 kr"
+                            android:text="4 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />
@@ -129,7 +129,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="5,30 kr"
+                            android:text="5 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />
@@ -196,7 +196,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="4,30 kr"
+                            android:text="4 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />
@@ -260,7 +260,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="5,90 kr"
+                            android:text="5 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />
@@ -327,7 +327,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="14,54 kr"
+                            android:text="14 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />
@@ -391,138 +391,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="19,54 kr"
-                            android:textAlignment="center"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="@color/orange" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-        </TableRow>
-
-        <TableRow>
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card154"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <!-- Media -->
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="10dp"
-                        android:contentDescription="@string/content_description_media"
-                        android:scaleType="centerInside"
-                        app:srcCompat="@drawable/producttuborggreen" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="11dp">
-
-                        <!-- Title, secondary and supporting text -->
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Tuborg Grøn"
-                            android:textAlignment="center"
-                            android:textAppearance="?attr/textAppearanceHeadline6" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Alkohol: 4,6%\nEmballage: Glasflaske\nStørrelse: 33 cl.\nLand: Danmark"
-                            android:textAlignment="center"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:fontFamily="sans-serif-black"
-                            android:text="4,63 kr"
-                            android:textAlignment="center"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="@color/orange" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/card162"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <!-- Media -->
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="10dp"
-                        android:contentDescription="@string/content_description_media"
-                        android:scaleType="centerInside"
-                        app:srcCompat="@drawable/producttuborgclassic" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="11dp">
-
-                        <!-- Title, secondary and supporting text -->
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Tuborg Classic"
-                            android:textAlignment="center"
-                            android:textAppearance="?attr/textAppearanceHeadline6" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Alkohol: 4,6%\nEmballage: Glasflaske\nStørrelse: 33 cl.\nLand: Danmark"
-                            android:textAlignment="center"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:fontFamily="sans-serif-black"
-                            android:text="5,30 kr"
+                            android:text="19 kr"
                             android:textAlignment="center"
                             android:textAppearance="?attr/textAppearanceBody2"
                             android:textColor="@color/orange" />

@@ -18,10 +18,14 @@ import androidx.lifecycle.ViewModelProvider;
 import com.arslanovic.justdrink.R;
 import com.arslanovic.justdrink.databinding.FragmentDashboardBinding;
 import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class DashboardFragment extends Fragment {
 
     private FragmentDashboardBinding binding;
+    private FirebaseUser user;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -75,6 +79,17 @@ public class DashboardFragment extends Fragment {
                 Toast.makeText(getActivity(), "Click", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        TextView name = (TextView)getActivity().findViewById(R.id.ProfileNametextView);
+        TextView email = (TextView)getActivity().findViewById(R.id.ProfileEmailtextView);
+
+        name.setText(user.getDisplayName());
+        email.setText(user.getEmail());
     }
 
     @Override

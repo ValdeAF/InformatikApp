@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "294539537501",
+    "project_id": "justdrink-f5ee4",
+    "storage_bucket": "justdrink-f5ee4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:294539537501:android:5d505b2de0a37a3ff631b4",
+        "android_client_info": {
+          "package_name": "com.arslanovic.justdrink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "294539537501-eds9kg6n5ns6sqm6ah3g0nj4rp3n2sdn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8rh8069lLCgxebqkJGs1sZuv8qzoTI30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "294539537501-eds9kg6n5ns6sqm6ah3g0nj4rp3n2sdn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

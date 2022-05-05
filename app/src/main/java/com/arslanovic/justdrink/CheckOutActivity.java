@@ -28,7 +28,6 @@ public class CheckOutActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
-  w
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_check_out);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);

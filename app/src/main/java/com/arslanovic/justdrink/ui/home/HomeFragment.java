@@ -1,9 +1,12 @@
 package com.arslanovic.justdrink.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TableLayout;
@@ -15,6 +18,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.arslanovic.justdrink.CheckOutActivity;
+import com.arslanovic.justdrink.MainActivity;
 import com.arslanovic.justdrink.R;
 import com.arslanovic.justdrink.ShoppingSystem;
 import com.arslanovic.justdrink.databinding.FragmentHomeBinding;
@@ -75,6 +80,7 @@ public class HomeFragment extends Fragment {
                             m.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
+                                    showBasketBtn();
                                     Toast.makeText(getActivity(), shoppingSystem.findProduct(view.getId()).getName() + " " +shoppingSystem.findProduct(view.getId()).getPrice(), Toast.LENGTH_SHORT).show();
                                     shoppingSystem.addToBasket(shoppingSystem.findProduct(view.getId()));
                                     Toast.makeText(getActivity(), "Basket value: " + shoppingSystem.getBasketValue(), Toast.LENGTH_SHORT).show();
@@ -215,6 +221,13 @@ public class HomeFragment extends Fragment {
 
             }
         });
+
+        binding.basketBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), CheckOutActivity.class));
+            }
+        });
     }
 
     @Override
@@ -239,6 +252,29 @@ public class HomeFragment extends Fragment {
         }
         else{
             t.setText("Gå i seng\n" + user.getDisplayName());
+        }
+    }
+
+    private void showBasketBtn(){
+        Button btn = (Button) getActivity().findViewById(R.id.basketBtn);
+        if(btn.getVisibility() == View.INVISIBLE){
+            btn.setVisibility(View.VISIBLE);
+            btn.animate().alpha(1).setDuration(200).start();
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    btn.animate().alpha(0).setDuration(2000).start();
+
+                    final Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            btn.setVisibility(View.INVISIBLE);
+                        }
+                    }, 2000);
+                }
+            }, 4000);
         }
     }
 

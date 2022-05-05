@@ -21,6 +21,24 @@
         app:layout_constraintVertical_bias="0.046"
         tools:layout_editor_absoluteX="0dp" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/basketBtn"
+        android:layout_width="311dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="400dp"
+        android:alpha="0"
+        android:text="Gå til indkøbskurv"
+        android:visibility="invisible"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.884"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp" />
+
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"

@@ -65,8 +65,6 @@ public class MainActivity extends AppCompatActivity {
                 // User chose the "Favorite" action, mark the current item
                 // as a favorite...
                 startActivity(new Intent(this, CheckOutActivity.class));
-
-                Toast.makeText(this, "Fav", Toast.LENGTH_SHORT).show();
                 return true;
 
             default:

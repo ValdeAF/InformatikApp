@@ -64,7 +64,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_favorite:
                 // User chose the "Favorite" action, mark the current item
                 // as a favorite...
-                startActivity(new Intent(this, CheckOutActivity.class));
+                ShoppingSystem shoppingSystem = (ShoppingSystem) getIntent().getSerializableExtra("ShopSys");
+                startActivity(new Intent(this, CheckOutActivity.class).putExtra("ShopSys", shoppingSystem));
                 return true;
 
             default:

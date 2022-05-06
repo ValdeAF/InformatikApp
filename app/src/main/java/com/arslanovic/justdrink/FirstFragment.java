@@ -85,7 +85,8 @@ private GoogleSignInClient mSignInClient;
                                     if (task.isSuccessful()) {
                                         // Sign in success, update UI with the signed-in user's information
                                         FirebaseUser user = mAuth.getCurrentUser();
-                                        startActivity(new Intent(getActivity(), MainActivity.class));
+                                        ShoppingSystem shoppingSystem = new ShoppingSystem();
+                                        startActivity(new Intent(getActivity(), MainActivity.class).putExtra("ShopSys", shoppingSystem));
                                     } else {
                                         // If sign in fails, display a message to the user.
                                         error.setVisibility(View.VISIBLE);

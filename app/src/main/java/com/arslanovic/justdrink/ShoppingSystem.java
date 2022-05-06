@@ -1,9 +1,10 @@
 package com.arslanovic.justdrink;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShoppingSystem {
+public class ShoppingSystem implements Serializable {
     //Private list containing all current products
     private List<Product> productList = new ArrayList<>();
     //Private list containing the products in the basket

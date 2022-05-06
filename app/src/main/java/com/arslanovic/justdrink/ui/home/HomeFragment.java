@@ -45,6 +45,7 @@ public class HomeFragment extends Fragment {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+        //shoppingSystem = (ShoppingSystem) getActivity().getIntent().getSerializableExtra("ShopSys");
         shoppingSystem = new ShoppingSystem();
        // final TextView textView = binding.textHome;
        // homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
@@ -225,7 +226,7 @@ public class HomeFragment extends Fragment {
         binding.basketBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), CheckOutActivity.class));
+                startActivity(new Intent(getActivity(), CheckOutActivity.class).putExtra("ShopSys", shoppingSystem));
             }
         });
     }

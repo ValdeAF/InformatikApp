@@ -1,6 +1,8 @@
 package com.arslanovic.justdrink;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,10 +14,12 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.arslanovic.justdrink.databinding.FragmentFirst2Binding;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.gson.Gson;
 
 public class First2Fragment extends Fragment {
 
     private FragmentFirst2Binding binding;
+    private ShoppingSystem shoppingSystem;
 
     @Override
     public View onCreateView(
@@ -24,6 +28,7 @@ public class First2Fragment extends Fragment {
     ) {
 
         binding = FragmentFirst2Binding.inflate(inflater, container, false);
+        shoppingSystem = (ShoppingSystem) getActivity().getIntent().getSerializableExtra("ShopSys");
         return binding.getRoot();
 
     }
@@ -42,7 +47,8 @@ public class First2Fragment extends Fragment {
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), MainActivity.class));
+                ShoppingSystem shoppingSystem = new ShoppingSystem();
+                startActivity(new Intent(getActivity(), MainActivity.class).putExtra("ShopSys", shoppingSystem));
             }
         });
     }
